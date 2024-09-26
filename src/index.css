@@ -1,3 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+:root {
+  --background-default: rgb(130, 130, 237);
+  --background-container: rgb(255, 255, 255);
+  --background-working: rgb(242, 117, 117);
+  --background-break: rgb(160, 254, 163);
+  --background-rest: rgb(232, 183, 132);
+  --background-button: #e4bddb;
+  --color-shadow: #000000d4;
+  --color-black: #000000;
+  --color-light: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,4 +22,69 @@
 
 body {
   font-family: sans-serif;
+  background: var(--background-default);
+  transition: background-color 300ms ease-in-out;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.working {
+  background: var(--background-working);
+}
+
+.hidden {
+  display: none;
+}
+
+.pomodoro {
+  background: var(--background-container);
+  margin: 50px 50px;
+  padding: 25px;
+  border-radius: 4px;
+  box-shadow: -5px 10px 10px var(--color-shadow);
+  border: 1px solid var(--color-black);
+  font-family: "Fira Code", monospace;
+}
+
+.pomodoro h2 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.pomodoro .timer {
+  font-size: 5rem;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.pomodoro .controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.pomodoro button {
+  cursor: pointer;
+  padding: 10px 25px;
+  color: var(--color-black);
+  border: 1px solid var(--color-black);
+  background: var(--background-default);
+  transition: background-color 300ms ease-in-out;
+  margin: 20px auto;
+  margin-bottom: 1px;
+}
+
+.working .pomodoro button {
+  color: var(--color-light);
+  background: var(--background-working);
+  transition: background-color 300ms ease-in-out;
+}
+
+.pomodoro .details {
+  margin: 20px 0;
 }
