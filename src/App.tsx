@@ -6,10 +6,10 @@ function App(): JSX.Element {
   return (
     <div className="container">
       <PomodoroTimer
-        defaultPomodoroTime={20}
-        shortRestTime={10}
-        longRestTime={5}
-        cycles={4}
+        defaultPomodoroTime={1500}  // 25min
+        shortRestTime={300} // 5min - For each pomodoro one shortRestTime
+        longRestTime={900}  // 15 min
+        cycles={4}  // For each end of cycle one longRestTime
       />
     </div>
   );
